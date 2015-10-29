@@ -1,0 +1,15 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.Accelerometer.Views.SaveToServer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.Accelerometer.Views"
+      mc:Ignorable="d" 
+      Title="SaveToServer">
+
+    <StackPanel Style="{DynamicResource Z-Middle}">
+        <Label Style="{DynamicResource Z-Header}">Saving To Server</Label>
+        <Label>Please connect to Internet</Label>
+        <Label>Meanwhile you can take your Zano out of the Box</Label>
+    </StackPanel>
+</Page>

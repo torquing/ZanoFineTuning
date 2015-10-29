@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="ZanoFineTuning.Views.Controls.ZConnectingProgress"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZanoFineTuning.Views.Controls"
+             mc:Ignorable="d" Loaded="ZanoBlinking_OnLoaded" Unloaded="ZanoBlinking_OnUnloaded">
+    <Image Source="/ZanoFineTuning;component/Views/Resources/Zano_Blink_None.png" Width="320" Height="320" x:Name="_Image"/>
+</UserControl>

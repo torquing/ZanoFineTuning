@@ -1,0 +1,153 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.Inspect.Views.Inspect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.Inspect.Views"
+      mc:Ignorable="d" Loaded="OnLoaded"
+      Title="Inspect">
+
+    <StackPanel Style="{DynamicResource Z-Middle}">
+        <Border Style="{DynamicResource Z-Modal}" Width="600">
+            <StackPanel>
+                <Label Style="{DynamicResource Z-Header}" x:Name="Header">XXYYZZWW</Label>
+
+                <Label Style="{DynamicResource Z-Half-Header}">Zano</Label>
+                
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Firmware</Label>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Width="30"></Label>
+                        <TextBox x:Name="VersionHardware" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">.</Label>
+                        <TextBox x:Name="VersionMajor" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">.</Label>
+                        <TextBox x:Name="VersionMinor" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">.</Label>
+                        <TextBox x:Name="VersionRevision" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+                
+                <Label Style="{DynamicResource Z-Half-Header}">Accelerometer Calibration</Label>
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Average</Label>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">X</Label>
+                        <TextBox x:Name="XValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Y</Label>
+                        <TextBox x:Name="YValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Z</Label>
+                        <TextBox x:Name="ZValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Minimum</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">X</Label>
+                        <TextBox x:Name="XMinValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Y</Label>
+                        <TextBox x:Name="YMinValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Z</Label>
+                        <TextBox x:Name="ZMinValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Maximum</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">X</Label>
+                        <TextBox x:Name="XMaxValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Y</Label>
+                        <TextBox x:Name="YMaxValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Z</Label>
+                        <TextBox x:Name="ZMaxValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <Label Style="{DynamicResource Z-Half-Header}">Sensors</Label>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Gyro</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">P</Label>
+                        <TextBox x:Name="PitchValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Y</Label>
+                        <TextBox x:Name="YawValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">R</Label>
+                        <TextBox x:Name="RollValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="120">Accelerometer</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">X</Label>
+                        <TextBox x:Name="AccelXValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Y</Label>
+                        <TextBox x:Name="AccelYValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Style="{DynamicResource Z-Field-Name}" Margin="0,3" Width="30">Z</Label>
+                        <TextBox x:Name="AccelZValue" Style="{DynamicResource Z-TextBox}" Width="70">000</TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <Button Style="{DynamicResource Z-Button}" x:Name="Menu" Content="Menu" Click="Menu_Click"/>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Page>

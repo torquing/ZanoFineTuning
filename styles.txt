@@ -1,0 +1,15 @@
+        <Border Style="{DynamicResource Z-Modal}">
+            <StackPanel HorizontalAlignment="Left">
+                <Label Style="{StaticResource Z-Hero}">Hello</Label>
+                <Label>Hello</Label>
+                <TextBox Style="{DynamicResource Z-TextBox}">Hello</TextBox>
+                <StackPanel Style="{StaticResource Z-Left}">
+                    <Button Style="{StaticResource Z-Button}" x:Name="button" Width="100">Test</Button>
+                </StackPanel>
+                <StackPanel Style="{DynamicResource Z-Button-Group-Center}">
+                    <Button x:Name="button1" Width="100">Test</Button>
+                    <Button x:Name="button2" Width="100">Test</Button>
+                    <Button x:Name="button3" Width="100">Test</Button>
+                </StackPanel>
+        </StackPanel>
+    </Border>

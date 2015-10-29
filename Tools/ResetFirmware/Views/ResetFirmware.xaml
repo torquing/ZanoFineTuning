@@ -1,0 +1,28 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.ResetFirmware.Views.ResetFirmware"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.ResetFirmware.Views"
+      mc:Ignorable="d"
+      Title="ResetFirmware">
+
+    <StackPanel Style="{DynamicResource Z-Middle}">
+        <Border Style="{DynamicResource Z-Modal}" Width="480">
+            <StackPanel>
+                <Label Style="{DynamicResource Z-Header}">WARNING</Label>
+                <TextBlock Style="{DynamicResource Z-Paragraph}" TextWrapping="Wrap">
+                    This tool will clear the current Firmware, configuration and calibration settings from your Zano.<LineBreak/><LineBreak/>
+                    After clearing this action cannot be undone.<LineBreak/><LineBreak/>
+                    Additionally by design, if you choose to connect your Zano to Zano Fine Tuning, the FlyZano App or any Zano based software will automatically upgrade your Zano to the latest Firmware, and calibrate it to the stock configuration.<LineBreak/>
+                    <LineBreak/>
+                    After clearing, Zano Fine Tuning will exit.<LineBreak/>
+                </TextBlock>
+                <StackPanel Style="{DynamicResource Z-Button-Group-Center}">
+                    <Button x:Name="Cancel" Click="DoCancel">Cancel</Button>
+                    <Button x:Name="Flash" Click="DoFlash">Clear my Zano</Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Page>

@@ -1,0 +1,19 @@
+﻿<Page x:Class="ZanoFineTuning.Views.AppConnect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Views"
+      xmlns:controls="clr-namespace:ZanoFineTuning.Views.Controls"
+      mc:Ignorable="d" 
+      Title="AppConnect" Loaded="OnLoaded">
+    <StackPanel Style="{DynamicResource Z-Middle}" Loaded="OnLoaded" Unloaded="OnUnloaded">
+        <controls:ZConnectingProgress x:Name="_Progress"/>
+        <StackPanel>
+            <Label x:Name="_Title" Style="{DynamicResource Z-Header}" HorizontalAlignment="Center">Connecting</Label>
+            <TextBlock x:Name="_Description" Style="{DynamicResource Z-Paragraph}" Height="100" TextWrapping="Wrap" TextAlignment="Center">Text...</TextBlock>
+            <Button x:Name="_Op" Click="DoOp" Style="{DynamicResource Z-Button}" Width="200">Text</Button>
+        </StackPanel>
+
+    </StackPanel>
+</Page>

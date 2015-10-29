@@ -1,0 +1,38 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.VibrationManual.Views.VibrationManual"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.VibrationManual.Views"
+      mc:Ignorable="d" 
+      Title="VibrationManual" Loaded="OnLoaded" Unloaded="OnUnloaded">
+
+    <StackPanel Style="{DynamicResource Z-Middle}">
+        <Border Style ="{DynamicResource Z-Modal}">
+            <StackPanel>
+                
+            <StackPanel>
+                <Label Style="{DynamicResource Z-Field-Name}">Motor 0</Label>
+                <TextBox x:Name="Motor0" Style="{DynamicResource Z-TextBox}" Width="200">0</TextBox>
+                <Label Style="{DynamicResource Z-Field-Name}">Motor 1</Label>
+                <TextBox x:Name="Motor1" Style="{DynamicResource Z-TextBox}" Width="200">0</TextBox>
+                <Label Style="{DynamicResource Z-Field-Name}">Motor 2</Label>
+                <TextBox x:Name="Motor2" Style="{DynamicResource Z-TextBox}" Width="200">0</TextBox>
+                <Label Style="{DynamicResource Z-Field-Name}">Motor 3</Label>
+                <TextBox x:Name="Motor3" Style="{DynamicResource Z-TextBox}" Width="200">0</TextBox>
+                <Button x:Name="Op" Click="OpOnClick" Style="{DynamicResource Z-Button}" Content="DO"/>
+            </StackPanel>
+                <StackPanel>
+                    <Label Style="{DynamicResource Z-Field-Name}">X</Label>
+                    <TextBox x:Name="XValue" Text="0" Style="{DynamicResource Z-TextBox}"/>
+                    <Label Style="{DynamicResource Z-Field-Name}">Y</Label>
+                    <TextBox x:Name="YValue" Text="0" Style="{DynamicResource Z-TextBox}"/>
+                    <Label Style="{DynamicResource Z-Field-Name}">Range X</Label>
+                    <TextBox x:Name="RangeX" Text="0" Style="{DynamicResource Z-TextBox}"/>
+                    <Label Style="{DynamicResource Z-Field-Name}">Mange Y</Label>
+                    <TextBox x:Name="RangeY" Text="0" Style="{DynamicResource Z-TextBox}"/>
+            </StackPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Page>

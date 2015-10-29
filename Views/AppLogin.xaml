@@ -1,0 +1,45 @@
+﻿<Page x:Class="ZanoFineTuning.Views.AppLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Views"
+      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:controls1="clr-namespace:ZanoFineTuning.Views.Controls"
+      mc:Ignorable="d"
+      Title="AppLogin"
+      Loaded="OnLoaded">
+    <StackPanel Style="{DynamicResource Z-Middle}" Width="720">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="320" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="Resources/Zano1.png"></Image>
+            <StackPanel Grid.Column="2" Style="{DynamicResource Z-Middle}">
+                
+            <Border Style="{DynamicResource Z-Modal}" Width="320">
+                <StackPanel>
+                    <Label Style="{DynamicResource Z-Header}" x:Name="Greeting">Welcome Back</Label>
+                    <Label Style="{DynamicResource Z-Field-Name}">E-mail Address</Label>
+                    <TextBox x:Name="User" Style="{DynamicResource Z-TextBox}" />
+                    <Label Style="{DynamicResource Z-Field-Name}">Password</Label>
+                    <PasswordBox  x:Name="Password" Style="{DynamicResource Z-Password}"/>
+                    <StackPanel Style="{DynamicResource Z-Button-Group-Right}" x:Name="ButtonSection">
+                        <Button x:Name="Logout" Visibility="Collapsed" Click="DoLogout">Logout</Button>
+                        <Button x:Name="Login" Visibility="Visible" Click="DoLogin">Login</Button>
+                        <Button x:Name="Continue" Visibility="Collapsed" Click="DoContinue">Continue</Button>
+                    </StackPanel>
+                    <controls1:ZProgressText x:Name="Progress" Visibility="Collapsed"/>
+                    <TextBlock x:Name="InfoText" Style="{DynamicResource Z-Paragraph}" Visibility="Collapsed">Text</TextBlock>
+                </StackPanel>
+            </Border>
+                <Label FontSize="{DynamicResource Z-Tiny}" HorizontalAlignment="Right" Foreground="{DynamicResource Z-Brush-Gray}" x:Name="Version">Version</Label>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>

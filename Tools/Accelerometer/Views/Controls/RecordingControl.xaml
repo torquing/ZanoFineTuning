@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ZanoFineTuning.Tools.Accelerometer.Views.Controls.RecordingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZanoFineTuning.Tools.Accelerometer.Views.Controls"
+             mc:Ignorable="d">
+    <Border BorderBrush="{DynamicResource Z-Brush-Gold}" BorderThickness="2,0,2,2">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center">
+            <Label x:Name="Id" Width="50" HorizontalContentAlignment="Left">0</Label>
+                <Label x:Name="SerialNumber" Width="175" HorizontalContentAlignment="Center" Foreground="{DynamicResource Z-Brush-Gray}">FFEEFFEEFFEEFFEE</Label>
+            <Label x:Name="DateTime" Foreground="{DynamicResource Z-Brush-Gray}">DD-MM-YYYY HH:MM:SS</Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="Apply" Style="{DynamicResource Z-Button}" Width="100">Apply</Button>
+        </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

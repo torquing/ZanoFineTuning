@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F23806B7-4A01-4A2D-B3EB-D4CD7FB39EB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZanoFineTuning</RootNamespace>
+    <AssemblyName>ZanoFineTuning</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Z_WPF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;Z_WPF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E4F12DF36B4F9040643D0526643616F141527BA0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ZanoFineTuning_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Tools\Accelerometer\Views\Complete.xaml.cs">
+      <DependentUpon>Complete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\Accelerometer.xaml.cs">
+      <DependentUpon>Accelerometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\Controls\AccAnimatedBox.xaml.cs">
+      <DependentUpon>AccAnimatedBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\Controls\RecordingControl.xaml.cs">
+      <DependentUpon>RecordingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\SaveToServer.xaml.cs">
+      <DependentUpon>SaveToServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\SaveToZano.xaml.cs">
+      <DependentUpon>SaveToZano.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accelerometer\Views\Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Inspect\Inspect.cs" />
+    <Compile Include="Tools\Inspect\Views\Inspect.xaml.cs">
+      <DependentUpon>Inspect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ResetFirmware\ResetFirmware.cs" />
+    <Compile Include="Tools\ResetFirmware\Views\ResetFirmware.xaml.cs">
+      <DependentUpon>ResetFirmware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ResetFirmware\Views\ResetingFirmware.xaml.cs">
+      <DependentUpon>ResetingFirmware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\VibrationManual\VibrationManual.cs" />
+    <Compile Include="Tools\VibrationManual\Views\VibrationManual.xaml.cs">
+      <DependentUpon>VibrationManual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Vibration\Vibration.cs" />
+    <Compile Include="Tools\Vibration\Views\Complete.xaml.cs">
+      <DependentUpon>Complete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Vibration\Views\VibMotorResult.xaml.cs">
+      <DependentUpon>VibMotorResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Vibration\Views\Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Vibration\Views\Vibration.xaml.cs">
+      <DependentUpon>Vibration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppTopPanel.xaml.cs">
+      <DependentUpon>AppTopPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ZConnectingProgress.xaml.cs">
+      <DependentUpon>ZConnectingProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ZPanelButton.xaml.cs">
+      <DependentUpon>ZPanelButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ZProgress.xaml.cs">
+      <DependentUpon>ZProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ZProgressText.xaml.cs">
+      <DependentUpon>ZProgressText.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\Complete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\Accelerometer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\Controls\AccAnimatedBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\Controls\RecordingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\SaveToServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\SaveToZano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Accelerometer\Views\Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Inspect\Views\Inspect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\ResetFirmware\Views\ResetFirmware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\ResetFirmware\Views\ResetingFirmware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\VibrationManual\Views\VibrationManual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Vibration\Views\Complete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Vibration\Views\VibMotorResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Vibration\Views\Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Vibration\Views\Vibration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppConnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppSplash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppTopPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\App.cs" />
+    <Compile Include="Core\FSM.cs" />
+    <Compile Include="Core\Internal\Connect.cs" />
+    <Compile Include="Core\LibZano.cs" />
+    <Compile Include="Core\Tool.cs" />
+    <Compile Include="Core\Utility.cs" />
+    <Compile Include="Core\View.cs" />
+    <Compile Include="Core\ZanoHandler.cs" />
+    <Compile Include="Tools\Accelerometer\Accelerometer.cs" />
+    <Compile Include="Tools\Registry.cs" />
+    <Compile Include="Views\AppConnect.xaml.cs">
+      <DependentUpon>AppConnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppLogin.xaml.cs">
+      <DependentUpon>AppLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppMenu.xaml.cs">
+      <DependentUpon>AppMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppSplash.xaml.cs">
+      <DependentUpon>AppSplash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppWindow.xaml.cs">
+      <DependentUpon>AppWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Controls\ZConnectingProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ZPanelButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ZProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ZProgressText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\CommonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="ZanoFineTuning_TemporaryKey.pfx" />
+    <Resource Include="Resources\Entypo.ttf" />
+    <None Include="Views\Resources\Zano_Blink_Blue.pdn" />
+    <None Include="Views\Resources\Zano_Blink_Red.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tools\Vibration\Views\Place_Zano.png" />
+    <Resource Include="Tools\Vibration\Views\Insert_Battery.png" />
+    <Resource Include="Tools\Vibration\Views\You_Will_Need.png" />
+    <Resource Include="Tools\Accelerometer\Views\Box_Near_Computer.png" />
+    <Resource Include="Tools\Accelerometer\Views\Insert_Cardboard_Lid.png" />
+    <Resource Include="Tools\Accelerometer\Views\Insert_Lid.png" />
+    <Resource Include="Tools\Accelerometer\Views\Insert_Zano.png" />
+    <Resource Include="Tools\Accelerometer\Views\Insert_Battery.png" />
+    <Resource Include="Tools\Accelerometer\Views\Instructions.png" />
+    <Resource Include="Tools\Accelerometer\Views\Instructions_Box.png" />
+    <Resource Include="Resources\Entypo-license.txt" />
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+    <Resource Include="Tools\Vibration\Views\ZanoTop.png" />
+    <Resource Include="Icon.ico" />
+    <Content Include="libZano.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Views\Resources\logo.png" />
+    <Resource Include="Views\Resources\placeholder_100x100.png" />
+    <Resource Include="Views\Resources\placeholder_500x500.png" />
+    <Resource Include="Views\Resources\Zano1.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation0.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation1.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation10.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation100.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation101.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation102.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation103.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation104.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation105.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation106.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation107.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation108.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation109.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation11.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation110.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation111.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation112.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation113.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation114.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation115.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation116.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation117.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation118.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation119.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation12.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation120.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation121.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation122.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation123.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation124.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation125.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation126.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation127.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation128.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation129.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation13.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation14.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation15.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation16.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation17.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation18.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation19.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation2.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation20.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation21.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation22.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation23.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation24.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation25.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation26.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation27.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation28.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation29.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation3.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation30.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation31.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation32.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation33.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation34.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation35.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation36.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation37.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation38.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation39.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation4.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation40.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation41.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation42.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation43.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation44.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation45.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation46.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation47.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation48.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation49.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation5.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation50.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation51.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation52.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation53.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation54.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation55.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation56.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation57.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation58.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation59.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation6.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation60.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation61.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation62.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation63.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation64.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation65.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation66.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation67.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation68.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation69.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation7.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation70.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation71.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation72.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation73.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation74.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation75.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation76.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation77.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation78.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation79.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation8.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation80.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation81.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation82.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation83.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation84.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation85.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation86.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation87.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation88.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation89.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation9.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation90.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation91.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation92.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation93.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation94.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation95.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation96.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation97.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation98.png" />
+    <Resource Include="Views\Resources\ZanoBoxAnimation99.png" />
+    <Resource Include="Views\Resources\Zano_Blink_Blue.png" />
+    <Resource Include="Views\Resources\Zano_Blink_None.png" />
+    <Resource Include="Views\Resources\Zano_Blink_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\Vibration\Views\Controls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

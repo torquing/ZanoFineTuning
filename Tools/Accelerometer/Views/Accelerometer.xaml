@@ -1,0 +1,63 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.Accelerometer.Views.Accelerometer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.Accelerometer.Views"
+      xmlns:controls="clr-namespace:ZanoFineTuning.Views.Controls"
+      xmlns:controls1="clr-namespace:ZanoFineTuning.Tools.Accelerometer.Views.Controls"
+      mc:Ignorable="d" 
+      Title="Accelerometer" Loaded="OnLoaded" Unloaded="OnUnloaded">
+    <Page.Resources>
+        <Style x:Key="Acc-Axis-Indicator" TargetType="{x:Type Label}">
+            <Style.BasedOn>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Foreground" Value="{DynamicResource Z-Brush-White}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource Z-Brush-Gold}"/>
+                    <Setter Property="BorderThickness" Value="2"></Setter>
+                    <Setter Property="Width" Value="64"></Setter>
+                    <Setter Property="Height" Value="64"></Setter>
+                    <Setter Property="Padding" Value="8"></Setter>
+                    <Setter Property="Margin" Value="8"></Setter>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                    <Setter Property="FontSize" Value="13"></Setter>
+                </Style>
+            </Style.BasedOn>
+
+        </Style>
+    </Page.Resources>
+
+        <StackPanel>
+            <controls1:AccAnimatedBox x:Name="Animation" Width="300" Height="300"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="Axis0" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+                <Label x:Name="Axis1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+                <Label x:Name="Axis2" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+                <Label x:Name="Axis3" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+                <Label x:Name="Axis4" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+                <Label x:Name="Axis5" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource Acc-Axis-Indicator}">i</Label>
+            </StackPanel>
+            <StackPanel Width="464">
+                <controls:ZProgress x:Name="Progress" Height="33"/>
+                <Label x:Name="ShortGuidance" ></Label>
+            </StackPanel>
+            <Grid  Width="464">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="35" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Style="{DynamicResource Z-Button}" Grid.ColumnSpan="3" Grid.Row="1" Click="Start_Click" x:Name="Start" Width="150">Start</Button>
+                <Button Style="{DynamicResource Z-Button}" Grid.Column="0" Grid.Row="1" Click="Retry_Click" x:Name="Retry">Retry</Button>
+                <Button Style="{DynamicResource Z-Button}" Grid.Column="2" Grid.Row="1" Click="Save_Click" x:Name="Save">Save Changes</Button>
+
+            </Grid>
+        </StackPanel>
+
+</Page>

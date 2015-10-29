@@ -1,0 +1,24 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Views"
+      xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" xmlns:Custom1="http://metro.mahapps.com/winfx/xaml/shared"
+    xmlns:controls="clr-namespace:ZanoFineTuning.Views.Controls"
+    x:Class="ZanoFineTuning.Views.AppMenu"
+      mc:Ignorable="d"
+      Title="AppMenu" Loaded="OnLoaded" Unloaded="OnUnloaded">
+
+    <StackPanel Style="{DynamicResource Z-Middle}">
+        <StackPanel Width="480" x:Name="Calibration">
+            <Label Style="{StaticResource Z-Half-Header-Inverse}" Margin="2,0,2,0">Calibration</Label>
+        </StackPanel>
+        <StackPanel Width="480" x:Name="Diagnostics">
+            <Label Style="{StaticResource Z-Half-Header-Inverse}" Margin="2,0,2,0">Diagnostics</Label>
+        </StackPanel>
+        <StackPanel Width="480" x:Name="Tools">
+            <Label Style="{StaticResource Z-Half-Header-Inverse}" Margin="2,0,2,0">Tools</Label>
+        </StackPanel>
+    </StackPanel>
+</Page>
