@@ -27,19 +27,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6754019C081204DF5E620E87120A93C6"
+        "MsmKey" = "8:_9F2B732E4573481437B9DBB19BEADE2C"
         "OwnerKey" = "8:_2FEF2C8E8FFF4446BA7D26094BC7ECED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6F60973F32D8CC4562B9E2CFFC314294"
-        "OwnerKey" = "8:_6754019C081204DF5E620E87120A93C6"
+        "MsmKey" = "8:_C32A603F86345E8C95DC3900BC4B743F"
+        "OwnerKey" = "8:_9F2B732E4573481437B9DBB19BEADE2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6F60973F32D8CC4562B9E2CFFC314294"
+        "MsmKey" = "8:_C32A603F86345E8C95DC3900BC4B743F"
         "OwnerKey" = "8:_2FEF2C8E8FFF4446BA7D26094BC7ECED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,13 +58,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6754019C081204DF5E620E87120A93C6"
+        "OwnerKey" = "8:_9F2B732E4573481437B9DBB19BEADE2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6F60973F32D8CC4562B9E2CFFC314294"
+        "OwnerKey" = "8:_C32A603F86345E8C95DC3900BC4B743F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -81,8 +81,8 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup.msi"
-        "PackageFilesAs" = "3:2"
+        "OutputFilename" = "8:..\\..\\..\\..\\ZanoFineTuning\\Setup\\Setup.msi"
+        "PackageFilesAs" = "3:4"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
         "Compression" = "3:2"
@@ -105,6 +105,11 @@
                     "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.5"
                     }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.14.0.x86"
+                    {
+                    "Name" = "8:Visual C++ \"14\" Runtime Libraries (x86)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.14.0.x86"
+                    }
                 }
             }
         }
@@ -113,7 +118,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup.msi"
+        "OutputFilename" = "8:..\\..\\SetupZanoFineTuning\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -132,10 +137,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.1"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    "Name" = "8:Microsoft .NET Framework 4.5.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.1"
                     }
                 }
             }
@@ -188,14 +193,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6754019C081204DF5E620E87120A93C6"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F2B732E4573481437B9DBB19BEADE2C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6754019C081204DF5E620E87120A93C6"
+                    "_9F2B732E4573481437B9DBB19BEADE2C"
                     {
                     "Name" = "8:MahApps.Metro.dll"
                     "Attributes" = "3:512"
@@ -219,14 +224,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6F60973F32D8CC4562B9E2CFFC314294"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C32A603F86345E8C95DC3900BC4B743F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6F60973F32D8CC4562B9E2CFFC314294"
+                    "_C32A603F86345E8C95DC3900BC4B743F"
                     {
                     "Name" = "8:System.Windows.Interactivity.dll"
                     "Attributes" = "3:512"
@@ -338,7 +343,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ZanoFineTuning"
         "ProductCode" = "8:{310B7D3E-726A-4441-B11B-0D8DB2093BEE}"
-        "PackageCode" = "8:{120E0563-EFB4-4467-BECF-D1A490EFF4D8}"
+        "PackageCode" = "8:{D1584025-4769-4ECE-A89D-E8275B1587D9}"
         "UpgradeCode" = "8:{4617D18D-123F-4BE9-B772-EBEB38072CB4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
