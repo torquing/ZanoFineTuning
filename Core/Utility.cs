@@ -56,9 +56,9 @@ namespace ZanoFineTuning.Core
 
         public static String GetVersionString()
         {
-            // ZanoFineTuning v0.0.6
+            // ZanoFineTuning v0.0.10
             StringBuilder sb = new StringBuilder(100);
-            sb.AppendFormat("ZanoFineTuning v{0}.{1}.{2}", 0, 0, 9);
+            sb.AppendFormat("ZanoFineTuning v{0}.{1}.{2}", 0, 0, 10);
             sb.Append(", ");
 
             LibZano.Version version = new LibZano.Version();
