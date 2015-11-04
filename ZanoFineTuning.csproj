@@ -97,6 +97,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Config.cs" />
     <Compile Include="Tools\Accelerometer\Views\Complete.xaml.cs">
       <DependentUpon>Complete.xaml</DependentUpon>
     </Compile>
@@ -121,6 +122,13 @@
     <Compile Include="Tools\Inspect\Inspect.cs" />
     <Compile Include="Tools\Inspect\Views\Inspect.xaml.cs">
       <DependentUpon>Inspect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Pressure\Pressure.cs" />
+    <Compile Include="Tools\Pressure\Views\Pressure.xaml.cs">
+      <DependentUpon>Pressure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Pressure\Views\Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools\ResetFirmware\ResetFirmware.cs" />
     <Compile Include="Tools\ResetFirmware\Views\ResetFirmware.xaml.cs">
@@ -194,6 +202,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tools\Inspect\Views\Inspect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Pressure\Views\Pressure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tools\Pressure\Views\Start.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,6 +363,9 @@
     <Resource Include="Resources\WindowsIcons-license.txt" />
     <Resource Include="Tools\Vibration\Views\ZanoTop.png" />
     <Resource Include="Icon.ico" />
+    <Resource Include="Config.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="libZano.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

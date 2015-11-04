@@ -1,0 +1,2 @@
+﻿pressure.d=10
+pressure.count=100

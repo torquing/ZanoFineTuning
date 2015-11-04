@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_98ADE6DD6A0D4AE1A854102A2748D389"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9F2B732E4573481437B9DBB19BEADE2C"
         "OwnerKey" = "8:_2FEF2C8E8FFF4446BA7D26094BC7ECED"
         "MsmSig" = "8:_UNDEFINED"
@@ -177,6 +183,26 @@
             {
             "SourcePath" = "8:..\\..\\libZano.dll"
             "TargetName" = "8:libZano.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_CB8D51F79E74470F8FCDBC34B90D6F2D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_98ADE6DD6A0D4AE1A854102A2748D389"
+            {
+            "SourcePath" = "8:..\\..\\Config.txt"
+            "TargetName" = "8:Config.txt"
             "Tag" = "8:"
             "Folder" = "8:_CB8D51F79E74470F8FCDBC34B90D6F2D"
             "Condition" = "8:"

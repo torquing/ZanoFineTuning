@@ -37,7 +37,7 @@ namespace ZanoFineTuning.Core
 
             a.OnMove("login_refresh>menu, login>menu, tool>menu", args =>
             {
-
+                Cfg.ReadConfigFile();
                 V.Navigate("Menu");
             });
             

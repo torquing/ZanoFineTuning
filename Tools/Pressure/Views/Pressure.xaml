@@ -1,0 +1,48 @@
+﻿<Page x:Class="ZanoFineTuning.Tools.Pressure.Views.Pressure"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZanoFineTuning.Tools.Vibration.Views"
+      xmlns:controls="clr-namespace:ZanoFineTuning.Views.Controls"
+      xmlns:global="clr-namespace:"
+      mc:Ignorable="d" 
+      Title="VibrationManual" Loaded="OnLoaded" Unloaded="OnUnloaded">
+    <Page.Resources>
+        <Style x:Key="VibMotorRating" TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Segoe UI, Lucida Sans Unicode, Verdana"/>
+            <Setter Property="FontSize" Value="{DynamicResource Z-Double}"/>
+            <Setter Property="Foreground" Value="#FFFAB800"/>
+            <Setter Property="Padding" Value="8,0,8,0" />
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="VibMotorName" TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Segoe UI, Lucida Sans Unicode, Verdana"/>
+            <Setter Property="FontSize" Value="{DynamicResource Z-Double}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Z-Brush-Gray}"/>
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <StackPanel Style="{DynamicResource Z-Middle}">
+
+            <StackPanel Style="{DynamicResource Z-Middle}" Margin="0,75,0,0">
+                <Label x:Name="CurrentAltitudeRange" FontSize="{DynamicResource Z-Double}" Padding="0" HorizontalContentAlignment="Center" Content="5.0"/>
+                <controls:ZProgress x:Name="Progress" Height="22" Margin="0,10,0,0" Width="150"/>
+                <Label x:Name="Warning" FontSize="{DynamicResource Z-Small}" HorizontalContentAlignment="Center" Padding="0" Margin="0,30,0,0" Content="Please do not touch the Zano"/>
+                <Label x:Name="Debug" FontSize="{DynamicResource Z-Small}" HorizontalContentAlignment="Center" Padding="0" Margin="0,10,0,0" Content="" />
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Style="{DynamicResource Z-Button}" x:Name="Stop" Content="Stop" Width="80" Click="Stop_Click"/>
+                <Button Style="{DynamicResource Z-Button}" x:Name="Start" Content="Start" Width="80" Click="Start_OnClick"/>
+                <Button Style="{DynamicResource Z-Button}" x:Name="Retry" Content="Retry" Width="80" Click="Retry_OnClick"/>
+                <Button Style="{DynamicResource Z-Button}" x:Name="Menu" Content="Menu" Width="80" Click="Menu_OnClick"/>
+            </StackPanel>
+        
+    </StackPanel>
+</Page>
